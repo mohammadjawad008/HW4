@@ -1,0 +1,9 @@
+<form method="POST" action="/ad/search.html">
+    <div class="mx-auto col-md-6">
+        <div class="input-group">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+            <input type="search" class="form-control rounded" name="query" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+            <button type="submit" class="btn btn-outline-primary">search</button>
+        </div>
+    </div>
+</form>

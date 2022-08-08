@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} User Login {% endblock %}</h1>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form method="POST" action="{{ url_for('user_login') }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" class="form-control" name="email"/>
+                    <label class="form-label" for="form2Example1">Email address</label>
+                </div>
+
+
+                <div class="form-outline mb-4">
+                    <input type="password" id="form2Example2" class="form-control" name="password"/>
+                    <label class="form-label" for="form2Example2">Password</label>
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="row mb-4">
+                    <div class="col justify-content-center">
+                        
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary mb-4">Sign in</button>
+                        </div>
+                        
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>Not a member? <a href="{{ url_for('user_register') }}">Register</a></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

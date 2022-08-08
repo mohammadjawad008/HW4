@@ -1,0 +1,26 @@
+<form action="{{ url_for('user_register') if not user is defined else url_for('user_update',user_id=user['id']) }}" method="POST" class="h-100 h-custom">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div class="row">
+        <div class="mx-auto col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+            <div class="mb-4">
+                <div class="form-outline form-white">
+                    <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="email" value="{{ user['mail'] if user is defined }}"/>
+                    <label class="form-label" for="form3Examplea9">Your Email</label>
+                </div>
+            </div>
+            <div class="form-outline">
+                <input type="password" id="form3Examplev5" class="form-control form-control-lg" name="password"/>
+                <label class="form-label" for="form3Examplev5">Password</label>
+            </div>
+
+            <div class="form-outline">
+                <input type="password" id="form3Examplev5" class="form-control form-control-lg" name="retype"/>
+                <label class="form-label" for="form3Examplev5">Confirm Password</label>
+            </div>
+            
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mb-4">Register</button>
+            </div>
+        </div>
+    </div>
+</form>

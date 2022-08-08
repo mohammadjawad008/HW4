@@ -1,0 +1,46 @@
+<form action="{{ url_for('adv_add') if not user is defined else url_for('adv_edit',adv_id=adv['id']) }}" method="POST" class="h-100 h-custom">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div class="row">
+        <div class="mx-auto col-md-6 mb-4 pb-2 mb-md-0 pb-md-0">
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="title" value="{{ adv['title'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Title</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="email" value="{{ adv['email'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">E-Mail</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="phone" value="{{ adv['phone'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Phone</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="street" value="{{ adv['street'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Street</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="postal" value="{{ adv['postal'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Postal</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="building" value="{{ adv['building'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Building</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="flat" value="{{ adv['flat'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Flat</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="city" value="{{ adv['city'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">City</label>
+            </div>
+            <div class="form-outline">
+                <input type="text" id="form3Examplea9" class="form-control form-control-lg" name="www" value="{{ adv['www'] if adv is defined }}"/>
+                <label class="form-label" for="form3Examplea9">Website</label>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary mb-4">Add</button>
+            </div>
+        </div>
+    </div>
+</form>

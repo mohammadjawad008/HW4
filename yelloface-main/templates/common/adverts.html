@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">E-Mail</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Street</th>
+      <th scope="col">Postal</th>
+      <th scope="col">Building</th>
+      <th scope="col">Flat</th>
+      <th scope="col">City</th>
+      <th scope="col">WWW</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for advert in ads %}
+    <tr>
+      <th scope="row">{{ advert[0] }} </th>
+      <th>{{ advert[1] }}</th>
+      <th>{{ advert[2] }}</th>
+      <th>{{ advert[3] }}</th>
+      <th>{{ advert[4] }}</th>
+      <th>{{ advert[5] }}</th>
+      <th>{{ advert[6] }}</th>
+      <th>{{ advert[7] }}</th>
+      <th>{{ advert[8] }}</th>
+      <th>{{ advert[9] }}</th>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
